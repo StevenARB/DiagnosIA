@@ -1,0 +1,93 @@
+/* Estilos básicos y fuentes */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f0f4f8;
+    color: #333;
+}
+
+/* Contenedor principal */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Card centrado */
+.card {
+    background-color: #ffffff;
+    padding: 2rem;
+    max-width: 400px;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Título */
+.card h1 {
+    font-size: 2rem;
+    color: #0066cc;
+    margin-bottom: 1rem;
+}
+
+/* Textarea de entrada */
+.card textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    resize: none;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Botón de diagnóstico */
+.card button {
+    background-color: #28a745;
+    color: white;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.card button:hover {
+    background-color: #218838;
+}
+
+/* Mensajes */
+.card p {
+    margin-bottom: 1rem;
+    color: #555;
+}
+
+.result {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background-color: #e9f7ef;
+    border: 1px solid #28a745;
+    border-radius: 5px;
+}
+
+.result h3 {
+    margin-bottom: 0.5rem;
+    color: #28a745;
+}
+
+.enfermedad {
+    text-align: justify;
+    margin-bottom: 5px !important;
+}
