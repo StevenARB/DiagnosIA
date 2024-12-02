@@ -24,6 +24,10 @@ Este proyecto es desarrollado por estudiantes de la Universidad Fidélitas.
     ```bash
     python database_setup.py
     ```
+5. Cambiar la llave secreta en el archivo ```api_gpt.py``` para acceder al servicio:
+    ```bash
+    openai.api_key = ""
+    ```
 ----------------------------------------------------------------------
 ## Ejecución
 1. Inicia la aplicación Flask:
