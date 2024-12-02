@@ -18,9 +18,11 @@ body {
 /* Contenedor principal */
 .container {
     display: flex;
-    align-items: center;
     justify-content: center;
-    height: 100vh;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1rem;
+    overflow: hidden;
 }
 
 /* Card centrado */
@@ -52,8 +54,35 @@ body {
     margin-bottom: 1rem;
 }
 
+.card textarea:focus {
+    outline: none;
+}
+
+/* Botón de lista */
+.card-button-accordion {
+    background-color: #e2ebff !important;
+    padding: 0.8rem 1.2rem;
+    border-color: #0066cc;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.card-button-accordion:hover {
+    background-color: #e2ebff;
+}
+
+.form-check-label {
+    display: block;
+    text-align: left;
+    font-size: 1rem;
+    line-height: 1.5;
+    cursor: pointer;
+}
+
 /* Botón de diagnóstico */
-.card button {
+.card-button-submit {
     background-color: #28a745;
     color: white;
     padding: 0.8rem 1.2rem;
@@ -64,14 +93,14 @@ body {
     transition: background-color 0.3s;
 }
 
-.card button:hover {
+.card-button-submit:hover {
     background-color: #218838;
 }
 
 /* Mensajes */
 .card p {
     margin-bottom: 1rem;
-    color: #555;
+    color: #222;
 }
 
 .result {
