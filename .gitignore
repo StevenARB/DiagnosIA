@@ -1,10 +1,1 @@
-
-app.py
-database_setup.py
-diagnosis_engine.py
-app.py
-requirements.txt
-static/styles.css
-symptoms_data.py
-symptoms_db.sqlite
-templates/index.html
+env
