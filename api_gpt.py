@@ -22,14 +22,13 @@ DiagnosIA: Basándome en tus síntomas:
 def get_diagnosis(symptoms):
     """Enviar los síntomas al modelo GPT y obtener el diagnóstico."""
     try:
-        response = openai.completions.create(
+        response = openai.ChatCompletion.create(
             model="gpt-4",
-            prompt=f"{base_prompt} A continuación los síntomas del paciente: {symptoms}",
-            max_tokens=100, 
-            n=1,
-            stop=None,
-            temperature=0.7
+            messages=[
+                {"role": "system", "content": base_prompt},
+                {"role": "user", "content": symptoms}
+            ]
         )
-        return response.choices[0].text.strip()
+        return response.choices[0].message.content.strip()
     except Exception as e:
         return f"Error al obtener diagnóstico: {str(e)}"
