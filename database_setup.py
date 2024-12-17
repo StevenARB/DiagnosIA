@@ -4,18 +4,21 @@ import sqlite3
 conn = sqlite3.connect("symptoms_db.sqlite")
 cursor = conn.cursor()
 
-# Crear la tabla
+# Crear la tabla si no existe
 cursor.execute('''CREATE TABLE IF NOT EXISTS diseases (
                     id INTEGER PRIMARY KEY,
                     name TEXT NOT NULL,
                     symptoms TEXT NOT NULL)''')
 
+# Eliminar el contenido existente en la tabla si esta existe
+cursor.execute("DELETE FROM diseases")
+
 # Insertar datos (esto es un ejemplo; puedes expandir la lista)
 diseases = [
-    ("Gripe", "fiebre, tos, dolor de cabeza, congestión nasal"),
-    ("Covid-19", "fiebre, tos, dificultad para respirar, pérdida de olfato"),
-    ("Migraña", "dolor de cabeza, náuseas, sensibilidad a la luz, vómitos"),
-    ("Amigdalitis", "dolor de garganta, fiebre, dificultad para tragar, inflamación de amígdalas")
+    ("Gripe", "Fiebre, Tos, Dolor de Cabeza, Congestión Nasal"),
+    ("Covid-19", "Fiebre, Tos, Dificultad para Respirar, Pérdida de Olfato"),
+    ("Migraña", "Dolor de Cabeza, Náuseas, Sensibilidad a la Luz, Vómitos"),
+    ("Amigdalitis", "Dolor de Garganta, Fiebre, Dificultad para Tragar, Inflamación de Amígdalas")
 ]
 
 # Insertar datos en la tabla
